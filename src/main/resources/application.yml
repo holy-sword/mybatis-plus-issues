@@ -1,0 +1,42 @@
+server:
+  port: 8920
+
+spring:
+  datasource:
+    # 数据库名
+    name: postgis
+    url: jdbc:postgresql://192.168.1.1:5432/${spring.datasource.name}?stringtype=unspecified
+    username: postgres
+    password:
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 16
+      max-wait: 60000
+      keep-alive: true
+      validation-query: select 1
+      # 指明连接是否被空闲连接回收器(如果有)进行检验.如果检测失败,则连接将被从池中去除
+      test-while-idle: true
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+
+# 配置mybatis-plus
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      # 该策略约定了如何产出注入的sql,涉及insert,update以及wrapper内部的entity属性生成的 where 条件（空字符串或空都将去掉）
+      insert-strategy: not_empty
+      update-strategy: not_empty
+      select-strategy: not_empty
+  type-handlers-package: com.lzx.dao.core.type
+
+# 设置分页插件
+pagehelper:
+  # 默认值为 false，当该参数设置为 true 时，如果 pageSize=0 或者 RowBounds.limit = 0 就会查询出全部的结果
+  page-size-zero: true
+
+# 打印sql
+logging:
+  level:
+    com.lzx.dao: debug
