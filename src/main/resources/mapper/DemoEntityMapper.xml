@@ -12,8 +12,6 @@
         <result column="e" property="e" typeHandler="com.lzx.dao.core.type.JsonTypeHandler"/>
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
-        <result column="name" property="roleName"/>
-        <result column="name" property="roleName"/>
     </resultMap>
 
     <select id="getList" resultMap="demo">

@@ -1,8 +1,8 @@
 package com.lzx.entity;
 
-import com.lzx.entity.core.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.lzx.entity.core.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -27,6 +27,7 @@ public class DemoEntity extends BaseEntity {
     @TableField(value = "d", el = "d,typeHandler=com.lzx.dao.core.type.JsonTypeHandler")
     private Location d;
     @TableField(value = "e", el = "e,typeHandler=com.lzx.dao.core.type.JsonTypeHandler")
+    //@TableField(value = "e", el = "e,typeHandler=com.lzx.dao.core.type.JsonTypeHandler",typeHandler = JsonTypeHandler.class)
     private Map<String, Object> e;
     @TableField("is_frozen")
     private Boolean frozen;
