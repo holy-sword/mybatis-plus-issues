@@ -1,7 +1,7 @@
 package com.lzx.dao;
 
-import com.lzx.entity.DemoEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.lzx.entity.DemoEntity;
 
 import java.util.List;
 
@@ -11,5 +11,5 @@ import java.util.List;
  */
 public interface DemoEntityMapper extends BaseMapper<DemoEntity> {
 
-    List<DemoEntity> getList();
+    List<DemoEntity> getAllList();
 }

@@ -47,7 +47,7 @@ public class ServiceApplicationTests {
         System.out.println(JSON.toJSONString(mapper.selectById("1")));
         System.out.println();
         System.out.println();
-        System.out.println(JSON.toJSONString(mapper.getList()));
+        System.out.println(JSON.toJSONString(mapper.getAllList()));
         System.out.println();
         System.out.println();
 

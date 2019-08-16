@@ -16,7 +16,7 @@ import java.util.Map;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
-@TableName("sys_xxx")
+@TableName(value = "sys_xxx", autoResultMap = true)
 public class DemoEntity extends BaseEntity {
 
     @TableField("a_a")
@@ -27,7 +27,6 @@ public class DemoEntity extends BaseEntity {
     @TableField(value = "d", el = "d,typeHandler=com.lzx.dao.core.type.JsonTypeHandler")
     private Location d;
     @TableField(value = "e", el = "e,typeHandler=com.lzx.dao.core.type.JsonTypeHandler")
-    //@TableField(value = "e", el = "e,typeHandler=com.lzx.dao.core.type.JsonTypeHandler",typeHandler = JsonTypeHandler.class)
     private Map<String, Object> e;
     @TableField("is_frozen")
     private Boolean frozen;

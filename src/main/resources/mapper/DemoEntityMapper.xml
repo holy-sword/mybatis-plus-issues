@@ -14,7 +14,7 @@
         <result column="update_time" property="updateTime"/>
     </resultMap>
 
-    <select id="getList" resultMap="demo">
+    <select id="getAllList" resultMap="demo">
         select * from sys_xxx
     </select>
 
