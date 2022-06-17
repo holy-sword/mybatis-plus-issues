@@ -18,7 +18,7 @@
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
-        <fastjson.version>1.2.59</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <mybatis-plus.version>3.1.2</mybatis-plus.version>
         <mybatis-pagehelper.version>1.2.12</mybatis-pagehelper.version>
         <druid-spring-boot-starter.version>1.1.18</druid-spring-boot-starter.version>
